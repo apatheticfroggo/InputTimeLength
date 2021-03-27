@@ -32,9 +32,9 @@ public class InputTimeLength
 		System.out.println();
 		findDuration(futYear,futMonth,futDay,futHour,futMinute,futSecond);
 	}
-	private void findDuration(int initY, int initMo,int initD, int initH, int initMin, int initS)
+	public void findDuration(int initY, int initMo,int initD, int initH, int initMin, int initS)
 	{
-		LocalDateTime specDate = LocalDateTime.of(initY,initMo,initD,initH,initMin,initS);
+	    LocalDateTime specDate = LocalDateTime.of(initY,initMo,initD,initH,initMin,initS);
 		//convert specDate in context of time-zone
 		ZonedDateTime specDateInZone = specDate.atZone(ZoneId.systemDefault());
 		
